@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToMany } from 'typeorm';
+import { Entity, Column, ManyToMany } from 'typeorm';
 import { StandardEntity } from './base.entity';
 import { Tag } from './tag.entity';
 

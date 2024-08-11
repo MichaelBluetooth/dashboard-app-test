@@ -8,6 +8,8 @@ import { AppService } from './app.service';
 import { StartupService } from './services/startup/startup.service';
 import { Project } from './entities/project.entity';
 import { Tag } from './entities/tag.entity';
+import { TagsController } from './controllers/tags/tags.controller';
+import { TagsService } from './services/tags/tags.service';
 
 const root: string = path.resolve(__dirname, "..")
 
@@ -25,7 +27,7 @@ const root: string = path.resolve(__dirname, "..")
     }),
     TypeOrmModule.forFeature([Project, Tag])
   ],
-  controllers: [AppController],
-  providers: [AppService, StartupService],
+  controllers: [AppController, TagsController],
+  providers: [AppService, StartupService, TagsService],
 })
 export class AppModule { }
