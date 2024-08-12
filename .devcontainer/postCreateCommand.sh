@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-cd "${localWorkspaceFolder}/../dashboard-app-server"
+echo "Installing client and server dependencies"
+echo $containerWorkspaceFolder
+
+cd "${containerWorkspaceFolder}/dashboard-app-server"
 npm install
 
-cd "${localWorkspaceFolder}/../dashboard-app-client"
+cd "${containerWorkspaceFolder}/dashboard-app-client"
 npm install
 
