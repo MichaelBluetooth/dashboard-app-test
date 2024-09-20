@@ -10,6 +10,10 @@ import { Project } from './entities/project.entity';
 import { Tag } from './entities/tag.entity';
 import { TagsController } from './controllers/tags/tags.controller';
 import { TagsService } from './services/tags/tags.service';
+import { ProjectAttribute, TemplateAttribute } from './entities/attribute.entity';
+import { ProjectTemplate } from './entities/project-template.entity';
+import { TemplatesController } from './controllers/templates/templates.controller';
+import { TemplateService } from './services/template/template.service';
 
 const root: string = path.resolve(__dirname, "..")
 
@@ -25,9 +29,9 @@ const root: string = path.resolve(__dirname, "..")
     ServeStaticModule.forRoot({
       rootPath: path.join(__dirname, '../../dashboard-app-client/dist/dashboard-app-client/browser'),
     }),
-    TypeOrmModule.forFeature([Project, Tag])
+    TypeOrmModule.forFeature([Project, Tag, ProjectAttribute, TemplateAttribute, ProjectTemplate])
   ],
-  controllers: [AppController, TagsController],
-  providers: [AppService, StartupService, TagsService],
+  controllers: [AppController, TagsController, TemplatesController],
+  providers: [AppService, StartupService, TagsService, TemplateService],
 })
 export class AppModule { }

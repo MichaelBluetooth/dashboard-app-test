@@ -1,0 +1,20 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Program</th>
+            <th scope="col">Status</th>
+            <th scope="col">Stage</th>
+            <th scope="col">Pace</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of projects">
+            <td width="35%">{{project.name}}</td>
+            <td width="25%">{{project.program}}</td>
+            <td>{{project.status}}</td>
+            <td>{{project.stage}}</td>
+            <td>{{project.pace}}</td>
+        </tr>
+    </tbody>
+</table>
